@@ -1,0 +1,23 @@
+<div class="row">
+    <h3>Topics: $scope, Dependency Injection, ng-repeat directive, filters, expression</h3>
+    <div ng-controller="topic3Controller">
+        {{msg}}
+        <br/>
+        Search by name: <input type="text" ng-model="empName">
+        <br/>
+        Search by Designation: <input type="text" ng-model="desig">
+        <br/>
+        Search by Experience: <input type="text" ng-model="exp">
+        <p ng-show="empName">Your search result for : {{empName}}</p>
+        <ul class="ul">
+            <li ng-repeat="employee in employees  | filter:empName | filter:exp | filter:desig | orderBy:'employee.name'">
+                Name : {{employee.name}}<br/>
+                Designation : {{employee.designation}} 
+                Experience : {{employee.experience}}
+            </li>
+        </ul>
+        
+        
+        
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row">
+    <h3>Topics: Custom Directives</h3>
+    <div ng-controller="topic3Controller">
+        {{msg}}
+        <br/>
+        Search by name: <input type="text" ng-model="empName">
+        <br/>
+        Search by Designation: <input type="text" ng-model="desig">
+        <br/>
+        Search by Experience: <input type="text" ng-model="exp">
+        <p ng-show="empName">Your search result for : {{empName}}</p>
+        <ul class="ul">
+            <li ng-repeat="employee in employees  | filter:empName | filter:exp | filter:desig | orderBy:'employee.name'">
+            <div my-details></mydetails>
+            </li>
+        </ul>
+      
+   
+        
+    </div>
+     <h1><a href="#/topic6">Now everyone want to click me.</a></h1>
+</div>
