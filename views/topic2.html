@@ -1,7 +1,51 @@
 <div class="row">
-    <h3>Topics: Controllers</h3>
-    <div ng-controller="topic2Controller as topic2">
-        {{topic2.msg}}
+    
+ 
+    <div class="col-lg-5">
+           <h3>Topics: Controllers</h3>        
+        <div ng-controller="topic2Controller as topic2">
+            {{topic2.msg}}
+
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <table class="table table-bordered">
+            <tr>
+                <th colspan="2">
+                    <h3>Concept(s)</h3>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Controller:
+                </td>
+                <td>
+                    Where we define our application's behavior by defining functions and values. 
+                </td>
+            </tr>
+            <tr>
+                <td>Code:</td>
+                <td>
+                    <pre>
+app.controller("topic2Controller", function () {
+
+    this.msg = "Hi! incaendo Team i am angularJS";
+
+});
+        </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    HTML
+                </td>
+                <td>
+                    &lt;div ng-controller="topic2Controller as topic2"&gt;<br />
+                    <br />
+                    &lt;/div&gt;
+                </td>
+            </tr>
+        </table>
         
     </div>
 </div>

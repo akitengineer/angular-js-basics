@@ -9,12 +9,15 @@ and open the template in the editor.
         <title>ANGULARJS FORUM</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="container">
-        <table class="table table-bordered" ng-controller="topicsController" ng-init="i = 0">
+    <body class="container-fluid">
+        <div class="col-lg-4">
+        <table class="table table-bordered" ng-controller="topicsController">
             <tr>
-                <th colspan="2" class="text-center"><h2>AngularJS Forum</h2></th>
+                <th colspan="2" class="text-center"><h2><img ng-src="images/AngularJS-large.png"/></h2></th>
             </tr>
             <tr>
                 <th>S.N.</th>
@@ -25,7 +28,10 @@ and open the template in the editor.
                 <td><a ng-href="{{topic.link}}">{{topic.name}}</a></td>
             </tr>
         </table>
-        <div ng-view=""></div>
+        </div>
+        <div class="col-lg-8">
+        <div  ng-view="" ng-model="myView"></div>
+        </div>
         <script src="node_modules/angular/angular.js"></script>
         <script src="node_modules/angular-route/angular-route.js"></script>
         <script src="app/controllers/mainController.js"></script>

@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row" ng-controller="topic1Controller">
     <div class="col-lg-5">
     <h3>Topics: Module, Directive, Two Data Binding</h3>
-    <table class="table">
+    <table class="table" >
         <tr>
             <td>
                 Enter name:
@@ -15,10 +15,48 @@
                 Hello {{myName}}
             </td>
         </tr>
+        <tr>
+            <td>
+                $scope.myName = {{myName}}
+            </td>
+        </tr>
     </table>
+    
     </div>
     <div class="col-lg-5">
-    <h3>Code & Logic</h3>
+    <h3>Description</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Concept</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Modules</td>
+            <td>
+                <ul>
+                    <li>Where we write pieces of our Angular application.</li>
+                    <li>Make our code more maintainable, readable, and readable.</li>
+                    <li>Where we define dependencies for our app.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Directives</td>
+            <td>A directive is marker on a HTML tag that tells Angular to run or reference some JavaScript Code.</td>
+        </tr>
+        <tr>
+            <td>Tow way data binding </td>
+            <td> Binding data with UI. <button type="button" ng-click="showImages()">Need Explanation</button></td>
+        </tr>
+    </table>
     
+    </div>
+    <div class="row" ng-show="needExplanation">
+        <div class="col-lg-5">
+            <img ng-src="images/One_Way_Data_Binding.png">
+        </div>
+        <div class="col-lg-5">
+            <img ng-src="images/Two_Way_Data_Binding.png">
+        </div>
     </div>
 </div>
